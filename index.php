@@ -15,8 +15,8 @@ foreach ($html->find('div.mini_item') as $element) {
             }else {
                 $output['List'][$i]['from']   = $element->childNodes(0)->innertext;
             }
-            $output['List'][$i]['link']   = $element->find('a', 0)->innertext;
-            $output['List'][$i]['title']  = $element->find('a', 0)->href;
+            $output['List'][$i]['title']   = $element->find('a', 0)->innertext;
+            $output['List'][$i]['link']  = $element->find('a', 0)->href;
            $i++;
         }
         else if (isset($element->find('div', 0)->class) || isset($element->find('a div', 1)->class)) {
@@ -25,8 +25,8 @@ foreach ($html->find('div.mini_item') as $element) {
             }else {
                 $output['List'][$i]['from']   = $element->childNodes(0)->innertext;
             }
-            $output['List'][$i]['link']   = $element->find('div a', 0)->innertext;
-            $output['List'][$i]['title']  = $element->find('div a', 0)->href;
+            $output['List'][$i]['title']   = $element->find('div a', 0)->innertext;
+            $output['List'][$i]['link']  = $element->find('div a', 0)->href;
             $i++;
         }
    }
